@@ -1,32 +1,95 @@
 import { createRouter, createWebHistory } from "vue-router";
 
-import Dashboard from '../pages/master/DashboardUI'
-import Home from '../pages/HomeContent'
-import Profile from '../pages/ProfileContent'
+// import dashboard
+import SUDashboard from '../pages/SuperAdmin/SuperAdminDashboard'
+
+// import HomeComponent
+import HomeDashboard from '../pages/SuperAdmin/Components/Home/HomeComponent';
+
+// import Bridge Component
+import BridgeList from '../pages/SuperAdmin/Components/Bridge/BridgeList';
+
+// import Operator Component
+import OperatorList from '../pages/SuperAdmin/Components/Operator/OperatorList';
+
+// import Maintenance Component
+import MaintenanceList from '../pages/SuperAdmin/Components/Maintenance/MaintenanceList';
+
+// import Customer Component
+import CustomerList from '../pages/SuperAdmin/Components/Customer/CustomerList';
+
+// profile superadmin content
+import SUProfil from '../pages/ProfileContent';
+
+// testing halaman
+import ChartTest from '../pages/SuperAdmin/Components/Home/ChartComponent';
 
 const routes = [
     {
-        name: 'Dashboard',
+        name: 'SuperAdmin Dashboard',
         path: '/',
-        component: Dashboard
+        component: SUDashboard,
+        children: [
+            {
+                name: 'SuperAdmin Dashboard',
+                path: '/',
+                component: HomeDashboard,
+            },
+            {
+                name: 'SuperAdmin Dashboard',
+                path: '/Home',
+                component: HomeDashboard,
+            },
+            {
+                name: 'Daftar Jembatan',
+                path: '/Bridge',
+                component: BridgeList,
+            },
+            {
+                name: 'Daftar Operator',
+                path: '/Operator',
+                component: OperatorList,
+            },
+            {
+                name: 'Daftar Maintenance',
+                path: '/Maintenance',
+                component: MaintenanceList,
+            },
+            {
+                name: 'Daftar Customer',
+                path: '/Customer',
+                component: CustomerList,
+            },
+            {
+                name: 'Profile',
+                path: '/Profile',
+                component: SUProfil,
+            },
+        ],
     },
     {
-        name: 'Home',
-        path: '/Home',
-        component: Home
-    },
-    {
-        name: 'Profile',
-        path: '/Profile',
-        component: Profile
-    },
+        name: 'Testing List',
+        path: '/chart',
+        component: ChartTest,
+    }
 ];
-const router = Router();
+
+const router = new createRouter({
+    history: createWebHistory(process.env.BASE_URL),
+    routes,
+});
+
+router.beforeEach((to, from, next) => {
+    document.title = `${to.name}`;
+    next();
+})
+
+router.beforeEach(async (to) => {
+    if (
+        to.path == '/'
+    ) {
+        return { path: '/Home' }
+    }
+})
+
 export default router;
-function Router() {
-    const router = new createRouter({
-        history: createWebHistory(),
-        routes,
-    });
-    return router;
-}

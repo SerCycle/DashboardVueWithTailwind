@@ -1,5 +1,5 @@
 <template>
-    <div class="h-[calc(500px-72px)]">
+    <div class="h-[calc(600px-72px)]">
         <apexchart type="area" height="100%" :options="chartOptions" :series="series"></apexchart>
     </div>
 </template>

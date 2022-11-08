@@ -11,6 +11,8 @@ import BridgeList from '../pages/SuperAdmin/Components/Bridge/BridgeList';
 
 // import Operator Component
 import OperatorList from '../pages/SuperAdmin/Components/Operator/OperatorList';
+import OperatorDetail from '../pages/SuperAdmin/Components/Operator/OperatorDetail';
+import OperatorEdit from '../pages/SuperAdmin/Components/Operator/OperatorEdit';
 
 // import Maintenance Component
 import MaintenanceList from '../pages/SuperAdmin/Components/Maintenance/MaintenanceList';
@@ -22,7 +24,7 @@ import CustomerList from '../pages/SuperAdmin/Components/Customer/CustomerList';
 import SUProfil from '../pages/ProfileContent';
 
 // testing halaman
-import ChartTest from '../pages/SuperAdmin/Components/Home/ChartComponent';
+// import ChartTest from '../pages/SuperAdmin/Components/Home/ChartComponent';
 
 const routes = [
     {
@@ -51,6 +53,16 @@ const routes = [
                 component: OperatorList,
             },
             {
+                name: 'Detail Operator',
+                path: '/Operator/Detail',
+                component: OperatorDetail,
+            },
+            {
+                name: 'Edit Operator',
+                path: '/Operator/Edit',
+                component: OperatorEdit,
+            },
+            {
                 name: 'Daftar Maintenance',
                 path: '/Maintenance',
                 component: MaintenanceList,
@@ -68,9 +80,9 @@ const routes = [
         ],
     },
     {
-        name: 'Testing List',
-        path: '/chart',
-        component: ChartTest,
+        name: 'Testing edit',
+        path: '/testing',
+        component: OperatorEdit,
     }
 ];
 

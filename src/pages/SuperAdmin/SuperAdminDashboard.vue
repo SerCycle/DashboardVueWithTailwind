@@ -61,7 +61,7 @@
                                 <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
                                     <font-awesome-icon class="w-4 h-auto text-gray-400" icon="fa-solid fa-magnifying-glass" />
                                 </div>
-                                <input type="text" id="voice-search" class="bg-white border text-[#518cd5] text-sm rounded-lg  block w-full pl-10 p-2.5  dark:border-gray-400 dark:placeholder-gray-400 " placeholder="Search..." required>
+                                <input type="text" id="voice-search" class="bg-white border text-[#518cd5] text-sm rounded-full  block w-full pl-10 p-2.5  dark:border-gray-400 dark:placeholder-gray-400 " placeholder="Search..." required>
                             </div>
                         </form>
                     </div>
@@ -70,7 +70,7 @@
                         <div class="cursor-pointer flex items-center justify-end space-x-4" @click="toggleDrop">
                             <div class="font-semibold text-right">
                                 <div class="text-[#548fd6]"><b>Welcome, Tester!</b></div>
-                                <div class="text-xs text-gray-500 dark:text-gray-400">Admin</div>
+                                <div class="text-xs text-gray-500 dark:text-gray-400">SuperAdmin</div>
                             </div>
                             <img class="w-10 h-10 rounded-full border-2 border-gray-50" src="../../assets/SuperAdmin.png" alt="">
                         </div>

@@ -8,6 +8,8 @@ import HomeDashboard from '../pages/SuperAdmin/Components/Home/HomeComponent';
 
 // import Bridge Component
 import BridgeList from '../pages/SuperAdmin/Components/Bridge/BridgeList';
+import BridgeDetail from '../pages/SuperAdmin/Components/Bridge/BridgeDetail';
+import BridgeEdit from '../pages/SuperAdmin/Components/Bridge/BridgeEdit';
 
 // import Operator Component
 import OperatorList from '../pages/SuperAdmin/Components/Operator/OperatorList';
@@ -46,6 +48,16 @@ const routes = [
                 name: 'Daftar Jembatan',
                 path: '/Bridge',
                 component: BridgeList,
+            },
+            {
+                name: 'Detail Jembatan',
+                path: '/Bridge/Detail',
+                component: BridgeDetail,
+            },
+            {
+                name: 'Edit Bridge',
+                path: '/Bridge/Edit',
+                component: BridgeEdit,
             },
             {
                 name: 'Daftar Operator',

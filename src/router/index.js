@@ -18,6 +18,8 @@ import OperatorEdit from '../pages/SuperAdmin/Components/Operator/OperatorEdit';
 
 // import Maintenance Component
 import MaintenanceList from '../pages/SuperAdmin/Components/Maintenance/MaintenanceList';
+import MaintenanceDetail from '../pages/SuperAdmin/Components/Maintenance/MaintenanceDetail';
+import MaintenanceEdit from '../pages/SuperAdmin/Components/Maintenance/MaintenanceEdit';
 
 // import Customer Component
 import CustomerList from '../pages/SuperAdmin/Components/Customer/CustomerList';
@@ -78,6 +80,16 @@ const routes = [
                 name: 'Daftar Maintenance',
                 path: '/Maintenance',
                 component: MaintenanceList,
+            },
+            {
+                name: 'Detail Maintenance',
+                path: '/Maintenance/Detail',
+                component: MaintenanceDetail,
+            },
+            {
+                name: 'Edit Maintenance',
+                path: '/Maintenance/Edit',
+                component: MaintenanceEdit,
             },
             {
                 name: 'Daftar Customer',
